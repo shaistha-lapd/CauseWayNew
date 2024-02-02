@@ -8,6 +8,7 @@ import "vuetify/dist/vuetify.css";
 import VuetifyGoogleAutocomplete from "vuetify-google-autocomplete";
 import { PublicClientApplication } from "@azure/msal-browser";
 
+
 const app = createApp(App);
 
 const vuetify = createVuetify();
