@@ -10,7 +10,7 @@ import { Icon } from "leaflet";
 import VueMask from "v-mask";
 import db from "./storage.js";
 import VueZxingScanner from "vue-zxing-scanner";
-// import msal from "vue-msal";
+import msal from "vue-msal";
 import "leaflet/dist/leaflet.css";
 
 Vue.prototype.$settings = () => {
@@ -30,31 +30,31 @@ Vue.directive("uppercase", {
 Vue.use(VueMask);
 Vue.use(db);
 Vue.use(VueZxingScanner);
-// Vue.use(msal, {
-//   auth: {
-//     tenantId: "642fd61c-34dd-4fd0-af8d-443576485883",
-//     clientId: "314c8cad-c1be-47d7-a62c-ca0f6a0bedc4",
-//     // redirectUri: "https://localhost:8080", //dev
-//     redirectUri: "https://causeway.lapd.tech", //live
-//     requireAuthOnInitialize: true,
-//     navigateToLoginRequestUrl: true,
-//   },
-//   request: {
-//     scopes: ["user.read"],
-//   },
-//   framework: {
-//     globalMixin: true,
-//   },
-//   graph: {
-//     callAfterInit: true,
-//     endpoints: {
-//       profile: "/me",
-//     },
-//   },
-//   cache: {
-//     cacheLocation: "localStorage",
-//   },
-// });
+Vue.use(msal, {
+  auth: {
+    tenantId: "642fd61c-34dd-4fd0-af8d-443576485883",
+    clientId: "314c8cad-c1be-47d7-a62c-ca0f6a0bedc4",
+    // redirectUri: "https://localhost:8080", //dev
+    redirectUri: "https://causeway.lapd.tech", //live
+    requireAuthOnInitialize: true,
+    navigateToLoginRequestUrl: true,
+  },
+  request: {
+    scopes: ["user.read"],
+  },
+  framework: {
+    globalMixin: true,
+  },
+  graph: {
+    callAfterInit: true,
+    endpoints: {
+      profile: "/me",
+    },
+  },
+  cache: {
+    cacheLocation: "localStorage",
+  },
+});
 
 Vue.use(VuetifyGoogleAutocomplete, {
   apiKey: "AIzaSyBjLCbmZzo_A5J12qxN_-PZezC2xNWTPRQ",
