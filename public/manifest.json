@@ -1,0 +1,22 @@
+{
+	"name": "LAPD Causeway",
+	"short_name": "Causeway",
+	"start_url": "/",
+	"id": "/",
+	"display": "standalone",
+	"background_color": "#18191a",
+	"theme_color": "#255070",
+
+	"icons": [
+		{
+			"src": "./img/lapd-badge-192x192.png",
+			"sizes": "192x192",
+			"type": "image/png"
+		},
+		{
+			"src": "./img/lapd-badge-512x512.png",
+			"sizes": "512x512",
+			"type": "image/png"
+		}
+	]
+}
