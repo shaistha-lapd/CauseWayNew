@@ -26,7 +26,7 @@
       <v-btn icon v-if="$vuetify.theme.dark" @click="toggleTheme()">
         <v-icon color="yellow darken-3">mdi-lightbulb-outline</v-icon>
       </v-btn>
-      {{ $settings.dense }}
+      <!-- {{ $settings.dense }} -->
       <Settings></Settings>
     </v-app-bar>
 
@@ -44,7 +44,7 @@
       <v-list nav dense shaped>
         <v-list-item>
           <v-list-item-content class="pr-0 mr-0">
-            <template v-if="!!appUser.serial">
+            <template v-if="!!appUser?.serial">
               <v-list-item-title
                 >{{ appUser.fullName }} #{{ appUser.serial }}</v-list-item-title
               >
@@ -146,15 +146,6 @@ export default {
     toggleTheme() {
       this.$vuetify.theme.dark = !this.$vuetify.theme.dark;
     },
-    // leaving(event) {
-    // 	event.preventDefault();
-    // 	this.$msal.signOut();
-    // 	if (!this.$msal.isAuthenticated()) {
-    // 		localStorage.clear();
-    // 		sessionStorage.clear();
-    // 		this.$router.push("/loggedout");
-    // 	}
-    // },
   },
   watch: {
     msal: {
@@ -176,6 +167,7 @@ export default {
   },
 };
 </script>
+
 <style>
 .v-text-field input {
   text-transform: uppercase !important;

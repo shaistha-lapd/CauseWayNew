@@ -20,7 +20,7 @@ export default {
 			return state;
 		},
 		appUser(state) {
-			var dps = !!state.dpsInfo ? state.dpsInfo : false;
+			var dps = state.dpsInfo ? state.dpsInfo : false;
 			let ms = state.profile;
 			let user = {
 				fullName: dps ? `${dps.firstName} ${dps.lastName}` : ms.displayName,
