@@ -2,6 +2,7 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import QrCodeGenerator from "../views/QrCodeGenerator";
+import PowerBiDashboardView from "../views/PowerBiDashboardView.vue";
 
 Vue.use(VueRouter);
 
@@ -24,6 +25,11 @@ const routes = [
     path: "/qrCode",
     name: "qrCode",
     component: QrCodeGenerator,
+  },
+  {
+    path: "/powerbi",
+    name: "qrCode",
+    component: PowerBiDashboardView,
   },
 ];
 
